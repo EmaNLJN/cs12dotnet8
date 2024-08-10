@@ -84,6 +84,12 @@ checked {
 
 #region Disabling compiler overflow checks with the unchecked
 
-
-
+unchecked {
+int y = int.MaxValue + 1;
+WriteLine($"Initial value: {y}");
+y--;
+WriteLine($"After decrementing: {y}");
+y--;
+WriteLine($"After decrementing: {y}");
+}
 #endregion

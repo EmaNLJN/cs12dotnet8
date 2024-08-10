@@ -1,6 +1,5 @@
 ﻿// See https://aka.ms/new-console-template for more information
 #region Looping with the while statement
-using System.Collections.ObjectModel;
 
 int x = 0;
 while (x < 10)
