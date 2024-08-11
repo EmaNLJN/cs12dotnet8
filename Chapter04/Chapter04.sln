@@ -9,6 +9,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WritingFunctions", "Writing
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Debugging", "Debugging\Debugging.csproj", "{518E417F-C1CB-45C3-B91F-4A57D0580CEB}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HotReloading", "HotReloading\HotReloading.csproj", "{9B52076E-0799-4E87-B7F5-A40E78CB238C}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -30,5 +32,9 @@ Global
 		{518E417F-C1CB-45C3-B91F-4A57D0580CEB}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{518E417F-C1CB-45C3-B91F-4A57D0580CEB}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{518E417F-C1CB-45C3-B91F-4A57D0580CEB}.Release|Any CPU.Build.0 = Release|Any CPU
+		{9B52076E-0799-4E87-B7F5-A40E78CB238C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{9B52076E-0799-4E87-B7F5-A40E78CB238C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{9B52076E-0799-4E87-B7F5-A40E78CB238C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{9B52076E-0799-4E87-B7F5-A40E78CB238C}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 EndGlobal
