@@ -1,0 +1,28 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.0.31903.59
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TopLevelFunctions", "TopLevelFunctions\TopLevelFunctions.csproj", "{B874E062-76C7-4B3C-93FE-76CFA3517F6A}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WritingFunctions", "WritingFunctions\WritingFunctions.csproj", "{1EB0DD1B-8F29-41EB-9C00-B79650919C85}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{B874E062-76C7-4B3C-93FE-76CFA3517F6A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B874E062-76C7-4B3C-93FE-76CFA3517F6A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B874E062-76C7-4B3C-93FE-76CFA3517F6A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B874E062-76C7-4B3C-93FE-76CFA3517F6A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{1EB0DD1B-8F29-41EB-9C00-B79650919C85}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{1EB0DD1B-8F29-41EB-9C00-B79650919C85}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{1EB0DD1B-8F29-41EB-9C00-B79650919C85}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{1EB0DD1B-8F29-41EB-9C00-B79650919C85}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+EndGlobal
