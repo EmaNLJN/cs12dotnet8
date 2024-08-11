@@ -7,6 +7,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TopLevelFunctions", "TopLev
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WritingFunctions", "WritingFunctions\WritingFunctions.csproj", "{1EB0DD1B-8F29-41EB-9C00-B79650919C85}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Debugging", "Debugging\Debugging.csproj", "{518E417F-C1CB-45C3-B91F-4A57D0580CEB}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -24,5 +26,9 @@ Global
 		{1EB0DD1B-8F29-41EB-9C00-B79650919C85}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{1EB0DD1B-8F29-41EB-9C00-B79650919C85}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{1EB0DD1B-8F29-41EB-9C00-B79650919C85}.Release|Any CPU.Build.0 = Release|Any CPU
+		{518E417F-C1CB-45C3-B91F-4A57D0580CEB}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{518E417F-C1CB-45C3-B91F-4A57D0580CEB}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{518E417F-C1CB-45C3-B91F-4A57D0580CEB}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{518E417F-C1CB-45C3-B91F-4A57D0580CEB}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 EndGlobal
