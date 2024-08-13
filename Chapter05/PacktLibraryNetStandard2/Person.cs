@@ -12,5 +12,27 @@ public class Person : object
 
   public List<Person> Children = new();
 
+  public const string Species = "Homo Sapiens";
+
+  public readonly string HomePlanet = "Earth";
+  public readonly DateTime Instantiated;
+
+  #endregion
+
+  #region Constructors: Called when using new to instantiate a type.
+
+  public Person()
+  {
+    Name = "Unknown";
+    Instantiated = DateTime.Now;
+  }
+
+  public Person(string initialName, string homePlanet)
+  {
+    Name = initialName;
+    HomePlanet = homePlanet;
+    Instantiated = DateTime.Now;
+  }
+
   #endregion
 }
