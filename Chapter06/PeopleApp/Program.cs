@@ -49,4 +49,42 @@ for(int i = 0; i < lamech.Children.Count; i++)
   arg2: lamech.Children[i].Name);
 }
 
+// non-generic lookup collection
+System.Collections.Hashtable lookUpObject = new();
+lookUpObject.Add(key: 1, value: "Alpha");
+lookUpObject.Add(key: 2, value: "Beta");
+lookUpObject.Add(key: 3, value: "Gamma");
+lookUpObject.Add(key: harry, value: "Delta");
 
+int key = 2; // look up the value that has 2 as its key.
+
+WriteLine(format: "Key {0} has value: {1}",
+  arg0: key,
+  arg1: lookUpObject[key]);
+
+WriteLine(format: "Key {0} has value: {1}",
+  arg0: harry,
+  arg1: lookUpObject[harry]);
+
+Dictionary<int, string> lookupIntString = new();
+lookupIntString.Add(key: 1, value: "Alpha");
+lookupIntString.Add(key: 2, value: "Beta");
+lookupIntString.Add(key: 3, value: "Gamma");
+lookupIntString.Add(key: 4, value: "Delta");
+
+key = 3;
+
+WriteLine(format: "Key {0} has value: {1}",
+  arg0: key,
+  arg1: lookupIntString[key]);
+
+// asign the method(s) to the Shout event delegate
+harry.Shout += Harry_Shout;
+harry.Shout += Harry_Shout_2;
+
+harry.Poke();
+harry.Poke();
+harry.Poke();
+harry.Poke();
+
+// repasar events y delegate, es un tema un poco complejo
