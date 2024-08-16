@@ -1,6 +1,6 @@
 ﻿namespace Packt.Shared;
 
-public class Person
+public class Person : IComparable<Person?>
 {
   #region Properties
 
@@ -138,4 +138,41 @@ public class Person
   }
 
   #endregion
+
+  public int CompareTo(Person? other)
+  {
+    int position;
+
+    if (other is not null)
+    {
+      if ((Name is not null) && (other.Name is not null))
+      {
+        // if both Name values are not null, then
+        // use the string implementation of CompareTo
+        position = Name.CompareTo(other.Name);
+      }
+      else if ((Name is not null) && (other.Name is null))
+      {
+        position = -1; // this person precedes other person.
+      }
+      else if ((Name is null) && (other.Name is not null))
+      {
+        position = 1; // this person follows other person.
+      }
+      else
+      {
+        position = 0; // this and other are at the same position.
+      }
+    }
+    else if (other is null)
+    {
+      position = -1; // this person precedes other person.
+    }
+    else
+    {
+      position = 0; // this and other are at the same position.
+    }
+
+    return position;
+  }
 }
