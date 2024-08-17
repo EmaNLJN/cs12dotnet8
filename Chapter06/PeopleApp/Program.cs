@@ -152,3 +152,72 @@ WriteLine($"div1 == dv5: {dv1 == dv5}");
 
 // Tema a profundizar Manejo de memoria, IDisponsable
 
+Employee john = new()
+{
+  Name = "John Jones",
+  Born = new(year: 1990, month: 7, day: 28,
+    hour: 0, minute: 0, second: 0, offset: TimeSpan.Zero)
+};
+
+john.WriteToConsole();
+
+john.EmployeeCode = "JJ001";
+john.HireDate = new(year: 2014, month: 11, day: 23);
+WriteLine($"{john.Name} was hired on {john.HireDate:yyyy-MM-dd}.");
+WriteLine(john.ToString());
+
+Employee aliceInEmployee = new()
+  { Name = "Alice", EmployeeCode = "AA123" };
+
+Person aliceInPerson = aliceInEmployee;
+
+aliceInEmployee.WriteToConsole();
+aliceInPerson.WriteToConsole();
+WriteLine(aliceInEmployee.ToString());
+WriteLine(aliceInPerson.ToString());
+
+try
+{
+  john.TimeTravel(when: new(1999, 12, 13));
+  john.TimeTravel(when: new(1950, 12, 25));
+}
+catch (PersonException ex)
+{
+  WriteLine(ex.Message);
+}
+
+string email1 = "pamela@test.com";
+string email2 = "ian&test.com";
+
+WriteLine("{0} is a valid e-mail address: {1}",
+  arg0: email1,
+  arg1: StringExtensions.IsValidEmail(email1));
+
+WriteLine("{0} is valid e-mail address: {1}",
+  arg0: email2,
+  arg1: StringExtensions.IsValidEmail(email2));
+
+WriteLine("{0} is a valid e-mail address: {1}",
+  arg0: email1,
+  arg1: email1.IsValidEmail());
+
+WriteLine("{0} is valid e-mail address: {1}",
+  arg0: email2,
+  arg1: email1.IsValidEmail());
+
+C1 c1 = new() { Name = "Bob" };
+c1.Name = "Bill";
+
+C2 c2 = new(Name: "Bob");
+// Error init-only property
+// c2.Name = "Bill";
+
+S1 s1 = new() { Name = "Bob" };
+s1.Name = "Bill";
+
+S2 s2 = new(Name: "Bob");
+s2.Name = "Bill";
+
+S3 s3 = new(Name: "Bob");
+// Init-only property
+// s3.Name = "Bill";
