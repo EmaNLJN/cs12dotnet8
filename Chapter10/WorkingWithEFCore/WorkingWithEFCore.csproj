@@ -13,6 +13,8 @@
 
   <ItemGroup>
     <PackageReference Version="8.0.0"
+      Include="Microsoft.EntityFrameworkCore.Proxies" />
+    <PackageReference Version="8.0.0"
       Include="Microsoft.EntityFrameworkCore.Design">
       <PrivateAssets>all</PrivateAssets>
       <IncludeAssets>runtime; build; native; contentfiles; analyzers;

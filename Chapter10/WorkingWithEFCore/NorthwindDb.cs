@@ -1,4 +1,5 @@
 using Microsoft.EntityFrameworkCore; // to use DbContext and so on.
+using Microsoft.EntityFrameworkCore.Diagnostics; // to use relationaleventid
 
 namespace Northwind.EntityModels;
 
@@ -19,6 +20,16 @@ public class NorthwindDb : DbContext
     string connectionString = $"Data Source={path}";
     WriteLine($"Connection: {connectionString}");
     optionsBuilder.UseSqlite(connectionString);
+
+    optionsBuilder.LogTo(WriteLine,// this is the console method
+      new[] { RelationalEventId.CommandExecuting })
+    #if DEBUG
+      .EnableSensitiveDataLogging() // Include SQL parameters.
+      .EnableDetailedErrors()
+    #endif
+    ;
+
+    optionsBuilder.UseLazyLoadingProxies();
   }
 
   protected override void OnModelCreating(ModelBuilder modelBuilder)
@@ -32,10 +43,11 @@ public class NorthwindDb : DbContext
     {
       // to fix the lack of decimal support in SQLite
       modelBuilder.Entity<Product>()
+        .HasQueryFilter(p => !p.Discontinued)
         .Property(product => product.Cost)
         .HasConversion<double>();
     }
   }
 }
 
-// seguir desde Querying EF Core models
+// uno de los capitulos mas densos y se tiene que practicar mucho.
