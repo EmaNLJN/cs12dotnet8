@@ -17,10 +17,24 @@ partial class Program
     IOrderedQueryable<Product> sortedAndFilteredProducts =
       filteredProducts.OrderByDescending(product => product.UnitPrice);
 
-    WriteLine("Products that cost less than $10:");
-    WriteLine(sortedAndFilteredProducts.ToQueryString());
+    // WriteLine("Products that cost less than $10:");
+    // WriteLine(sortedAndFilteredProducts.ToQueryString());
 
-    foreach (Product p in sortedAndFilteredProducts)
+    var projectedProducts = sortedAndFilteredProducts
+      .Select(product => new // Anonymous type.
+      {
+        product.ProductId,
+        product.ProductName,
+        product.UnitPrice
+      });
+
+    WriteLine("Products that cost less than $10:");
+    WriteLine(projectedProducts.ToQueryString());
+
+    // se usa projection para que la consulta
+    // en lugar de llamar todas las columnas
+    // solo lo haga con las que uso.
+    foreach (var p in projectedProducts)
     {
       WriteLine("{0}: {1} costs {2:$#,##0.00}",
         p.ProductId, p.ProductName, p.UnitPrice);
